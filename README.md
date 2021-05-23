@@ -1,6 +1,6 @@
 # Shop-Shop: Redux Edition
 ## Description
-A MERN stack shopping application originally coded with GlobalState reworked to utilize Redux insteads.
+A MERN stack shopping application originally coded with GlobalState refactored to utilize Redux instead.
 
 ## Built With
 * MongoDB
