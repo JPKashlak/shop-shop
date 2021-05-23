@@ -5,7 +5,8 @@ import { useQuery } from '@apollo/react-hooks';
 import { QUERY_PRODUCTS } from "../utils/queries";
 import spinner from '../assets/spinner.gif'
 
-import { useStoreContext } from "../utils/GlobalState";
+//  Archived for GlobalState
+// import { useStoreContext } from "../utils/GlobalState";
 
 import Cart from "../components/Cart";
 import {
@@ -14,11 +15,19 @@ import {
   ADD_TO_CART,
   UPDATE_PRODUCTS
 } from '../utils/actions';
+
 import CartItem from "../components/CartItem";
 import { idbPromise } from "../utils/helpers";
+import { useDispatch, useSelector } from "react-redux";
 
 function Detail() {
-  const [state, dispatch] = useStoreContext();
+  
+  // Archived
+  // const [state, dispatch] = useStoreContext();
+  const state = useSelector((state) => {
+    return state
+  });
+  const dispatch = useDispatch();
 
   const { id } = useParams();
 
